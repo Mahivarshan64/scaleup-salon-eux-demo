@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — You &amp; Me Salon</title>
+  <meta name="description" content="Learn about You & Me Salon — our story, our values, and the talented team behind every stunning transformation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">You <span>&amp;</span> Me</a>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="index.html#showcase">Gallery</a></li>
+        <li><a href="index.html#testimonials">Reviews</a></li>
+        <li><a href="contact.html" class="btn btn-primary nav-book">Book Now</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav-close" id="mobileClose">&times;</button>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="index.html#showcase">Gallery</a>
+    <a href="index.html#testimonials">Reviews</a>
+    <a href="contact.html" class="btn btn-primary" style="margin-top:1.5rem;text-align:center;display:block;">Book Now</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> About</div>
+      <h1 data-gsap="fade-up">Our Story</h1>
+      <p data-gsap="fade-up">A passion for beauty, a commitment to excellence, and a warm space where everyone is welcome.</p>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="about" id="story">
+    <div class="container">
+      <div class="about-image-wrap reveal-left">
+        <div class="about-image">
+          <img src="images/about.png" alt="Salon interior">
+        </div>
+        <div class="about-accent-box">
+          <h3>15+</h3>
+          <p>Years of Excellence</p>
+        </div>
+      </div>
+      <div class="about-content reveal-right">
+        <div class="section-label">Who We Are</div>
+        <h2>Beauty Born from Passion</h2>
+        <p class="about-text">You &amp; Me Salon was founded in 2010 with a simple vision: to create a space where artistry and warmth come together. What started as a small studio has grown into one of the city's most beloved beauty destinations.</p>
+        <p class="about-text">We believe that beauty is deeply personal. Every service we offer is tailored to reflect your unique style and personality. Our team stays at the forefront of trends while honouring classic techniques that stand the test of time.</p>
+        <div class="about-features">
+          <div class="about-feature"><div class="icon">✦</div><span>Award-Winning Stylists</span></div>
+          <div class="about-feature"><div class="icon">✦</div><span>Premium Organic Products</span></div>
+          <div class="about-feature"><div class="icon">✦</div><span>Warm &amp; Welcoming Space</span></div>
+          <div class="about-feature"><div class="icon">✦</div><span>Personalized Consultations</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="services" id="values">
+    <div class="container">
+      <div class="services-header reveal">
+        <div class="section-label" style="justify-content:center;">Our Values</div>
+        <h2>What We Stand For</h2>
+        <p>The principles that guide every interaction, every treatment, and every smile.</p>
+      </div>
+      <div class="values-grid">
+        <div class="value-card reveal">
+          <div class="value-icon">💎</div>
+          <h3>Excellence</h3>
+          <p>We pursue perfection in every detail, from the products we choose to the techniques we master.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-icon">🤝</div>
+          <h3>Connection</h3>
+          <p>We build genuine relationships with every client, listening deeply and caring authentically.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-icon">🌿</div>
+          <h3>Sustainability</h3>
+          <p>We're committed to eco-friendly practices and cruelty-free, organic products whenever possible.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARALLAX -->
+  <section class="parallax-section" style="padding:140px 0;text-align:center;color:#fff;">
+    <div class="parallax-bg" data-parallax-speed="0.3">
+      <img src="images/salon-wide.png" alt="Salon ambience">
+    </div>
+    <div class="parallax-overlay"></div>
+    <div class="container" data-gsap="fade-up">
+      <h2 style="color:#fff;font-size:clamp(2rem,4vw,3.2rem);max-width:700px;margin:0 auto 1rem;">"The best thing is to look natural, but it takes makeup to look natural."</h2>
+      <p style="color:rgba(255,255,255,.75);font-size:1.05rem;">— Calvin Klein</p>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section style="padding:120px 0;background:var(--bg);" id="team">
+    <div class="container">
+      <div class="services-header reveal">
+        <div class="section-label" style="justify-content:center;">Meet The Team</div>
+        <h2>Our Talented Stylists</h2>
+        <p>Passionate professionals dedicated to making you look and feel extraordinary.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card reveal">
+          <div class="team-card-image"><img src="images/stylist.png" alt="Elena Rivers"></div>
+          <h3>Elena Rivers</h3>
+          <p class="role">Creative Director</p>
+          <p>With 18 years of experience and multiple awards, Elena leads our vision for innovation and style.</p>
+        </div>
+        <div class="team-card reveal">
+          <div class="team-card-image"><img src="images/stylist-2.png" alt="Marcus Chen"></div>
+          <h3>Marcus Chen</h3>
+          <p class="role">Senior Stylist</p>
+          <p>A master of precision cuts and colour, Marcus brings artistry and energy to every appointment.</p>
+        </div>
+        <div class="team-card reveal">
+          <div class="team-card-image"><img src="images/stylist-3.png" alt="Sophia Nakamura"></div>
+          <h3>Sophia Nakamura</h3>
+          <p class="role">Beauty Therapist</p>
+          <p>Specialising in skincare and wellness, Sophia creates bespoke treatments for radiant, healthy skin.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container reveal">
+      <div class="section-label" style="justify-content:center;color:rgba(255,255,255,.7);">Join the Family</div>
+      <h2>Ready to Experience the Difference?</h2>
+      <p>Book your first visit and discover why thousands trust us with their beauty.</p>
+      <a href="contact.html" class="btn btn-arrow">Book an Appointment</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">You <span>&amp;</span> Me</a>
+          <p>A luxury salon dedicated to making you look and feel your absolute best.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social-link">IG</a>
+            <a href="#" class="footer-social-link">FB</a>
+            <a href="#" class="footer-social-link">PI</a>
+            <a href="#" class="footer-social-link">TK</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="about.html">About Us</a><a href="services.html">Services</a><a href="index.html#showcase">Gallery</a><a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <div class="footer-links">
+            <a href="services.html">Hair Styling</a><a href="services.html">Facials</a><a href="services.html">Nail Care</a><a href="services.html">Bridal</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <div class="footer-contact-item"><span class="icon">📍</span><span>123 Beauty Lane, Suite 200<br>New York, NY 10001</span></div>
+          <div class="footer-contact-item"><span class="icon">📞</span><span>(555) 123-4567</span></div>
+          <div class="footer-contact-item"><span class="icon">✉️</span><span>hello@youandmesalon.com</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 You &amp; Me Salon. All rights reserved.</p>
+        <p>Designed with ♥ for beauty lovers.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
