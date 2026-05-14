@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Scaleup Unisex Salon gallery — bridal makeup, curly hair results, hair colour, men's cuts. Chennai's premium beauty destination.">
+  <title>Gallery — Scaleup Unisex Salon</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-brand">
+      <img src="images/scale up logo.png" alt="ScaleUp Unisex Salon" class="nav-logo">
+      <div class="nav-brand-text">
+        <span class="nav-brand-name">SCALE UP</span>
+        <span class="nav-brand-sub">Unisex Salon</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Book Appointment</a>
+    <button class="nav-hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu">
+    <ul class="mobile-menu-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- GALLERY HERO -->
+  <header class="gallery-hero">
+    <span class="label-text" style="margin-bottom:24px;display:block;">Our Work</span>
+    <h1><span>The Work<br>Speaks.</span></h1>
+  </header>
+
+  <!-- FILTER BAR -->
+  <div class="gallery-filter-bar" role="tablist" aria-label="Filter gallery by category">
+    <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+    <button class="filter-btn" data-filter="bridal" role="tab" aria-selected="false">Bridal</button>
+    <button class="filter-btn" data-filter="colour" role="tab" aria-selected="false">Hair Colour</button>
+    <button class="filter-btn" data-filter="curly" role="tab" aria-selected="false">Curly</button>
+    <button class="filter-btn" data-filter="mens" role="tab" aria-selected="false">Men's</button>
+  </div>
+
+  <!--
+    EDITORIAL GALLERY GRID — 12 columns, each row sums to exactly 12 cols.
+    Row 1–3 : 6 + 3 + 3 = 12
+    Row 4–5 : 6 + 3 + 3 = 12
+    Row 6–7 : 4 + 4 + 4 = 12
+    Row 8–9 : 6 + 3 + 3 = 12
+    Row 10–11: 8 + 4     = 12
+    No gaps — dark background never shows through.
+  -->
+  <main class="gallery-editorial" aria-label="Gallery grid">
+
+    <!-- Row 1–3 -->
+    <div class="ge-item ge-xl" data-category="bridal">
+      <img src="images/bridal 1.jpg" alt="Bridal look — red lehenga with gold jewellery" loading="lazy">
+      <div class="ge-overlay">
+        <span class="ge-cat">Bridal</span>
+        <span class="ge-title">Red Lehenga Bridal</span>
+      </div>
+    </div>
+
+    <div class="ge-item ge-portrait" data-category="colour">
+      <img src="images/color 1.jpg" alt="Hair colour — deep red auburn" loading="lazy">
+      <div class="ge-overlay">
+        <span class="ge-cat">Hair Colour</span>
+        <span class="ge-title">Deep Auburn Red</span>
+      </div>
+    </div>
+
+    <div class="ge-item ge-portrait" data-category="mens">
+      <img src="images/men 1.jpg" alt="Men's cut — modern fade" loading="lazy">
+      <div class="ge-overlay">
+        <span class="ge-cat">Men's Grooming</span>
+        <span class="ge-title">Modern Fade</span>
+      </div>
+    </div>
+
+    <!-- Row 4–5 -->
+    <div class="ge-item ge-wide" data-category="colour">
+      <img src="images/color 2.jpg" alt="Hair colour — silver grey toned" loading="lazy">
+      <div class="ge-overlay">
+        <span class="ge-cat">Hair Colour</span>
+        <span class="ge-title">Silver Toning</span>
+      </div>
+    </div>
+
+    <div class="ge-item ge-med" data-category="bridal">
+      <img src="images/bridal 2.jpg" alt="Bridal makeup — dramatic eyes" loading="lazy">
+      <div class="ge-overlay">
+        <span class="ge-cat">Bridal</span>
+        <span class="ge-title">Dramatic Eye</span>
+      </div>
+    </div>
+
+    <div class="ge-item ge-med" data-category="mens">
+      <img src="images/men 2.jpg" alt="Men's cut — textured top" loading="lazy">
+      <div class="ge-overlay">
+        <span class="ge-cat">Men's Grooming</span>
+        <span class="ge-title">Textured Crop</span>
+      </div>
+    </div>
+
+    <!-- Row 6–7 -->
+    <div class="ge-item ge-sm" data-category="curly">
+      <img src="images/scale curly.jpg" alt="Curly hair Deva cut result" loading="lazy">
+      <div class="ge-overlay">
+        <span class="ge-cat">Curly Hair</span>
+        <span class="ge-title">Deva Cut</span>
+      </div>
+    </div>
+
+    <div class="ge-item ge-sm" data-category="colour">
+      <img src="images/color 3.jpg" alt="Hair colour — burnt orange copper" loading="lazy">
+      <div class="ge-overlay">
+        <span class="ge-cat">Hair Colour</span>
+        <span class="ge-title">Copper Balayage</span>
+      </div>
+    </div>
+
+    <div class="ge-item ge-sm" data-category="mens">
+      <img src="images/men 3.jpg" alt="Men's cut — curly textured" loading="lazy">
+      <div class="ge-overlay">
+        <span class="ge-cat">Men's Grooming</span>
+        <span class="ge-title">Curly Textured</span>
+      </div>
+    </div>
+
+    <!-- Row 8–9 -->
+    <div class="ge-item ge-wide" data-category="bridal">
+      <img src="images/bridal 3.jpg" alt="Bridal look — pink lehenga" loading="lazy">
+      <div class="ge-overlay">
+        <span class="ge-cat">Bridal</span>
+        <span class="ge-title">Pink Lehenga Bridal</span>
+      </div>
+    </div>
+
+    <div class="ge-item ge-med" data-category="curly">
+      <img src="images/scale wavy.jpg" alt="Wavy hair balayage result" loading="lazy">
+      <div class="ge-overlay">
+        <span class="ge-cat">Wavy Hair</span>
+        <span class="ge-title">Balayage &amp; Waves</span>
+      </div>
+    </div>
+
+    <div class="ge-item ge-med" data-category="mens">
+      <img src="images/men 4.jpg" alt="Men's cut — buzz fade" loading="lazy">
+      <div class="ge-overlay">
+        <span class="ge-cat">Men's Grooming</span>
+        <span class="ge-title">Buzz Fade</span>
+      </div>
+    </div>
+
+    <!-- Row 10–11 -->
+    <div class="ge-item ge-row" data-category="curly">
+      <img src="images/scale straight.jpg" alt="Straight sleek keratin result" loading="lazy">
+      <div class="ge-overlay">
+        <span class="ge-cat">Straight &amp; Sleek</span>
+        <span class="ge-title">Keratin Treatment</span>
+      </div>
+    </div>
+
+    <div class="ge-item ge-sm" data-category="mens">
+      <img src="images/men 5.jpg" alt="Men's cut — side profile clean" loading="lazy">
+      <div class="ge-overlay">
+        <span class="ge-cat">Men's Grooming</span>
+        <span class="ge-title">Side Profile Cut</span>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <img src="images/scale up logo.png" alt="ScaleUp Unisex Salon" class="footer-logo-img">
+        <span class="footer-brand-name">SCALE UP</span>
+        <span class="footer-brand-sub">Unisex Salon</span>
+        <span class="footer-tagline">Your texture. Our expertise.</span>
+      </div>
+      <div>
+        <span class="footer-col-label">Explore</span>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-label">Specialities</span>
+        <ul class="footer-links">
+          <li><a href="services.html">Curly Hair</a></li>
+          <li><a href="services.html">Hair Botox</a></li>
+          <li><a href="services.html">Nail Art</a></li>
+          <li><a href="services.html">Bridal</a></li>
+          <li><a href="services.html">Facials</a></li>
+          <li><a href="services.html">Men's Grooming</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-label">Find Us</span>
+        <p class="footer-contact-item">New No 18, Old No 26, 2nd Floor</p>
+        <p class="footer-contact-item">Hoppman Street, Ramapuram</p>
+        <p class="footer-contact-item">Chennai 600089</p>
+        <a href="tel:+919003158542" class="footer-contact-item highlight" style="margin-top:12px">+91 90031 58542</a>
+        <p class="footer-contact-item" style="margin-top:8px">Mon–Sat: 10AM–8PM</p>
+        <p class="footer-contact-item">Sunday: 10AM–6PM</p>
+        <a href="https://instagram.com/scaleup_salon" target="_blank" rel="noopener" class="footer-contact-item highlight" style="margin-top:12px">@scaleup_salon</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Scaleup Unisex Salon, Chennai. Website by ElevateUX.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

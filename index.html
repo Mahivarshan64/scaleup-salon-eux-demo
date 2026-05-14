@@ -3,354 +3,562 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>You &amp; Me Salon — Luxury Hair, Beauty &amp; Wellness</title>
-  <meta name="description" content="You & Me Salon offers premium hair styling, facials, nail care and beauty services in an elegant, welcoming setting. Book your appointment today.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <meta name="description" content="Scaleup Unisex Salon — Chennai's specialist salon for curly hair, keratin, botox, and advanced nail artistry. Ramapuram, Chennai.">
+  <title>Scaleup Unisex Salon — Ramapuram, Chennai</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- ========== NAVBAR ========== -->
-  <nav class="navbar" id="navbar">
-    <div class="container">
-      <a href="#" class="logo">You <span>&amp;</span> Me</a>
-      <ul class="nav-links">
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="#showcase">Gallery</a></li>
-        <li><a href="#testimonials">Reviews</a></li>
-        <li><a href="contact.html" class="btn btn-primary nav-book">Book Now</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-brand">
+      <img src="images/scale up logo.png" alt="ScaleUp Unisex Salon" class="nav-logo">
+      <div class="nav-brand-text">
+        <span class="nav-brand-name">SCALE UP</span>
+        <span class="nav-brand-sub">Unisex Salon</span>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <a href="contact.html" class="nav-cta">Book Appointment</a>
+
+    <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </nav>
 
-  <!-- Mobile Nav -->
-  <div class="mobile-overlay" id="mobileOverlay"></div>
-  <div class="mobile-nav" id="mobileNav">
-    <button class="mobile-nav-close" id="mobileClose">&times;</button>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="#showcase">Gallery</a>
-    <a href="#testimonials">Reviews</a>
-    <a href="contact.html" class="btn btn-primary" style="margin-top:1.5rem;text-align:center;display:block;">Book Now</a>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" aria-hidden="true">
+    <ul class="mobile-menu-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
   </div>
 
-  <!-- ========== HERO ========== -->
-  <section class="hero" id="hero">
-    <div class="hero-bg-3d" aria-hidden="true">
-      <span class="hero-bg-glow"></span>
-      <span class="hero-bg-plane"></span>
-      <span class="hero-bg-plane-2"></span>
-    </div>
-    <div class="hero-blob"></div>
-    <div class="container">
-      <div class="hero-content reveal-left">
-        <div class="section-label">Welcome to You &amp; Me</div>
-        <h1>Where Beauty Meets <em>Elegance</em></h1>
-        <p class="hero-desc">
-          Indulge in a luxurious salon experience crafted with care. From hair styling to skincare, we bring out the best version of you.
-        </p>
-        <div class="hero-buttons">
-          <a href="#contact" class="btn btn-primary btn-arrow">Book Appointment</a>
-          <a href="#services" class="btn btn-outline">Our Services</a>
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section class="hero" aria-label="Hero">
+
+    <!-- Animated gradient blob -->
+    <svg class="hero-wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <radialGradient id="blobGrad1" cx="50%" cy="50%" r="50%">
+          <stop offset="0%"   stop-color="#c05060" stop-opacity="0.90"/>
+          <stop offset="60%"  stop-color="#be4d5a" stop-opacity="0.55"/>
+          <stop offset="100%" stop-color="#c05060" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="blobGrad2" cx="50%" cy="50%" r="50%">
+          <stop offset="0%"   stop-color="#b8943a" stop-opacity="0.60"/>
+          <stop offset="100%" stop-color="#b8943a" stop-opacity="0"/>
+        </radialGradient>
+        <filter id="blobBlur">
+          <feGaussianBlur stdDeviation="48"/>
+        </filter>
+      </defs>
+      <!-- Primary blob -->
+      <ellipse class="hero-blob-1" cx="620" cy="480" rx="520" ry="340"
+        fill="url(#blobGrad1)" filter="url(#blobBlur)"/>
+      <!-- Secondary accent blob -->
+      <ellipse class="hero-blob-2" cx="980" cy="260" rx="320" ry="220"
+        fill="url(#blobGrad2)" filter="url(#blobBlur)"/>
+    </svg>
+
+    <!-- Hero content -->
+    <div class="hero-content">
+      <div class="hero-headline" aria-label="Care for Your Unique Texture.">
+        <div class="hero-line line-light">
+          <span>Care for Your</span>
         </div>
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <h3>15+</h3>
-            <p>Years Experience</p>
-          </div>
-          <div class="hero-stat">
-            <h3>8K+</h3>
-            <p>Happy Clients</p>
-          </div>
-          <div class="hero-stat">
-            <h3>25+</h3>
-            <p>Expert Stylists</p>
-          </div>
+        <div class="hero-line line-light">
+          <span><em class="word-unique">Unique</em> Texture</span>
         </div>
       </div>
-      <div class="hero-image reveal-right">
-        <div class="hero-image-frame">
-          <img src="images/hero.png" alt="Luxury salon experience at You and Me" loading="eager">
+
+      <div class="hero-divider" aria-hidden="true"></div>
+
+      <p class="hero-subline">
+        Chennai's specialist salon for curly hair, keratin, botox,
+        and advanced nail artistry. Inclusive. Expert. Yours.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="contact.html" class="btn-primary">Book Appointment</a>
+        <a href="services.html" class="btn-secondary">Explore Services</a>
+      </div>
+    </div>
+
+    <!-- Floating badges -->
+    <div class="hero-badge hero-badge-rating" aria-hidden="true">
+      <div class="hero-badge-num">4.8</div>
+      <div class="hero-badge-label">★ Rating</div>
+    </div>
+    <div class="hero-badge hero-badge-clients" aria-hidden="true">
+      <div class="hero-badge-num">840+</div>
+      <div class="hero-badge-label">Happy Clients</div>
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       SPECIALTY INTRO
+  ============================================================ -->
+  <section class="specialty">
+    <div class="specialty-inner">
+      <!-- Left -->
+      <div class="specialty-left">
+        <span class="label-text specialty-label">Our Specialty</span>
+
+        <div class="specialty-headline">
+          <div class="specialty-headline-line">
+            <span>We don't just style hair.</span>
+          </div>
+          <div class="specialty-headline-line italic">
+            <span>We understand it.</span>
+          </div>
+        </div>
+
+        <div class="specialty-divider reveal"></div>
+
+        <p class="specialty-body reveal reveal-delay-1">
+          Scaleup Unisex Salon is Chennai's premier destination for
+          texture-intelligent hair care. Our stylists are certified in
+          Deva and Rezo methods, trained to work with every curl pattern,
+          wave type, and hair texture. Combined with premium vegan
+          formulas and advanced treatments, we deliver results that
+          respect your hair's health.
+        </p>
+
+        <div class="specialty-tags reveal reveal-delay-2">
+          <span class="specialty-tag">Curly Hair Specialists</span>
+          <span class="specialty-tag">Hair Botox &amp; Keratin</span>
+          <span class="specialty-tag">Russian Manicures</span>
+          <span class="specialty-tag">Bridal Specialists</span>
+          <span class="specialty-tag">Vegan Products</span>
+        </div>
+      </div>
+
+      <!-- Right -->
+      <div class="specialty-right reveal reveal-delay-1">
+        <div class="specialty-img-wrap">
+          <img src="images/about.png" alt="Scaleup Salon interior — warm, elegant" class="specialty-img">
+        </div>
+        <div class="specialty-year-badge">
+          <span class="badge-year">2002</span>
+          <span class="badge-label">Est. · 20+ Years</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== ABOUT ========== -->
-  <section class="about" id="about">
-    <div class="container">
-      <div class="about-image-wrap reveal-left">
-        <div class="about-image">
-          <img src="images/about.png" alt="Inside You and Me Salon">
-        </div>
-        <div class="about-accent-box">
-          <h3>15+</h3>
-          <p>Years of Excellence</p>
+  <!-- ============================================================
+       HAIR TYPE SHOWCASE
+  ============================================================ -->
+  <section class="hair-types">
+    <div class="hair-types-header">
+      <span class="label-text">Find Your Texture</span>
+      <h2 class="hair-types-headline reveal">What's Your Hair Story?</h2>
+    </div>
+
+    <div class="hair-panels">
+      <!-- Panel 1 -->
+      <div class="hair-panel">
+        <img src="images/scale curly.jpg" alt="Curly hair specialist result" class="hair-panel-img">
+        <div class="hair-panel-overlay" aria-hidden="true"></div>
+        <div class="hair-panel-content">
+          <p class="hair-panel-type">Curly &amp; Coily</p>
+          <h3 class="hair-panel-name">Deva &amp; Rezo</h3>
+          <p class="hair-panel-desc">Certified curl specialists who honour your natural texture with every cut and treatment.</p>
+          <a href="services.html" class="hair-panel-cta">Explore →</a>
         </div>
       </div>
-      <div class="about-content reveal-right">
-        <div class="section-label">Our Story</div>
-        <h2>A Haven of Beauty &amp; Relaxation</h2>
-        <p class="about-text">
-          Founded with a passion for beauty and wellness, You &amp; Me Salon has been transforming looks and uplifting spirits for over fifteen years. Our team of skilled professionals uses only the finest products and techniques.
-        </p>
-        <p class="about-text">
-          Step into our warm, inviting space and let us pamper you. Whether it's a fresh new hairstyle, a rejuvenating facial, or a flawless manicure — we've got you covered.
-        </p>
-        <div class="about-features">
-          <div class="about-feature">
-            <div class="icon">✦</div>
-            <span>Premium Products</span>
-          </div>
-          <div class="about-feature">
-            <div class="icon">✦</div>
-            <span>Expert Stylists</span>
-          </div>
-          <div class="about-feature">
-            <div class="icon">✦</div>
-            <span>Relaxing Ambiance</span>
-          </div>
-          <div class="about-feature">
-            <div class="icon">✦</div>
-            <span>Personalized Care</span>
-          </div>
+
+      <!-- Panel 2 -->
+      <div class="hair-panel">
+        <img src="images/scale wavy.jpg" alt="Wavy balayage result" class="hair-panel-img">
+        <div class="hair-panel-overlay" aria-hidden="true"></div>
+        <div class="hair-panel-content">
+          <p class="hair-panel-type">Wavy &amp; Textured</p>
+          <h3 class="hair-panel-name">Balayage &amp; Waves</h3>
+          <p class="hair-panel-desc">Dimensional colour and wave-enhancing treatments that move with your hair, not against it.</p>
+          <a href="services.html" class="hair-panel-cta">Explore →</a>
         </div>
-        <a href="#services" class="btn btn-primary btn-arrow">Discover More</a>
       </div>
+
+      <!-- Panel 3 -->
+      <div class="hair-panel">
+        <img src="images/scale straight.jpg" alt="Straight sleek result" class="hair-panel-img">
+        <div class="hair-panel-overlay" aria-hidden="true"></div>
+        <div class="hair-panel-content">
+          <p class="hair-panel-type">Straight &amp; Sleek</p>
+          <h3 class="hair-panel-name">Botox &amp; Keratin</h3>
+          <p class="hair-panel-desc">Advanced smoothing treatments for frizz-free, luminous results that last months.</p>
+          <a href="services.html" class="hair-panel-cta">Explore →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hair-types-cta-wrap">
+      <a href="services.html" class="btn-primary">Discover Your Hair Type</a>
     </div>
   </section>
 
-  <!-- ========== SERVICES ========== -->
-  <section class="services" id="services">
-    <div class="container">
-      <div class="services-header reveal">
-        <div class="section-label" style="justify-content:center;">What We Offer</div>
-        <h2>Our Signature Services</h2>
-        <p>Experience luxury treatments tailored to bring out your natural beauty and radiance.</p>
+  <!-- ============================================================
+       SIGNATURE SERVICES — CARD GRID
+  ============================================================ -->
+  <section class="services-preview">
+    <div class="services-preview-header">
+      <span class="label-text services-preview-label">Signature Services</span>
+      <div class="services-header-row">
+        <h2 class="services-preview-headline reveal">Every Service.<br><em>Elevated.</em></h2>
+        <a href="services.html" class="services-view-all reveal reveal-delay-1">View All Services →</a>
       </div>
-      <div class="services-grid">
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-card-bg" style="background-image:url('images/scale curly.jpg')"></div>
+        <div class="service-card-overlay"></div>
+        <div class="service-card-content">
+          <span class="service-card-num">01</span>
+          <div class="service-card-foot">
+            <p class="service-card-label">Texture Specialists</p>
+            <h3 class="service-card-name">Curly Hair Care</h3>
+            <p class="service-card-desc">Certified Deva &amp; Rezo cuts for every curl pattern — no shortcuts, no straightening.</p>
+            <a href="services.html" class="service-card-link">Book This Service →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card-bg" style="background-image:url('images/services-hair.png')"></div>
+        <div class="service-card-overlay"></div>
+        <div class="service-card-content">
+          <span class="service-card-num">02</span>
+          <div class="service-card-foot">
+            <p class="service-card-label">Advanced Smoothing</p>
+            <h3 class="service-card-name">Hair Botox</h3>
+            <p class="service-card-desc">Repair, smooth, and shine — treatments that restore hair health from inside the shaft.</p>
+            <a href="services.html" class="service-card-link">Book This Service →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card-bg" style="background-image:url('images/services-nails.png')"></div>
+        <div class="service-card-overlay"></div>
+        <div class="service-card-content">
+          <span class="service-card-num">03</span>
+          <div class="service-card-foot">
+            <p class="service-card-label">Precision Nail Art</p>
+            <h3 class="service-card-name">Nail Artistry</h3>
+            <p class="service-card-desc">Russian manicures and gel extensions — precision, longevity, zero damage.</p>
+            <a href="services.html" class="service-card-link">Book This Service →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card-bg" style="background-image:url('images/bridal 1.jpg')"></div>
+        <div class="service-card-overlay"></div>
+        <div class="service-card-content">
+          <span class="service-card-num">04</span>
+          <div class="service-card-foot">
+            <p class="service-card-label">Complete Packages</p>
+            <h3 class="service-card-name">Bridal Services</h3>
+            <p class="service-card-desc">Hair, makeup, draping — your entire wedding morning, handled seamlessly.</p>
+            <a href="services.html" class="service-card-link">Book This Service →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card-bg" style="background-image:url('images/services-facial.png')"></div>
+        <div class="service-card-overlay"></div>
+        <div class="service-card-content">
+          <span class="service-card-num">05</span>
+          <div class="service-card-foot">
+            <p class="service-card-label">Clinical Treatments</p>
+            <h3 class="service-card-name">Skin &amp; Facial</h3>
+            <p class="service-card-desc">Results-first facials — assessed before treated, because your skin deserves a plan.</p>
+            <a href="services.html" class="service-card-link">Book This Service →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card-bg" style="background-image:url('images/men 1.jpg')"></div>
+        <div class="service-card-overlay"></div>
+        <div class="service-card-content">
+          <span class="service-card-num">06</span>
+          <div class="service-card-foot">
+            <p class="service-card-label">Precision Cuts</p>
+            <h3 class="service-card-name">Men's Grooming</h3>
+            <p class="service-card-desc">Modern fades and textured cuts tailored to your face shape and lifestyle.</p>
+            <a href="services.html" class="service-card-link">Book This Service →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       OUR WORK — SCATTERED MOODBOARD
+  ============================================================ -->
+  <section class="gallery-preview">
+
+    <!-- Center content card -->
+    <div class="work-center">
+      <span class="label-text">Our Work</span>
+      <h2 class="work-headline">Beauty in<br>Every Detail.</h2>
+      <p class="work-body">Two decades of texture, colour, and craft — documented in every result we deliver.</p>
+      <a href="gallery.html" class="work-cta">View Full Gallery →</a>
+    </div>
+
+    <!-- Scattered photos -->
+    <figure class="work-photo work-photo--1">
+      <img src="images/bridal 1.jpg" alt="Bridal look — red lehenga">
+      <figcaption class="work-photo-cap">
+        <span class="work-photo-cat">Bridal</span>
+        <span class="work-photo-title">Red Lehenga Bridal</span>
+      </figcaption>
+    </figure>
+
+    <figure class="work-photo work-photo--2">
+      <img src="images/scale curly.jpg" alt="Curly hair Deva cut">
+      <figcaption class="work-photo-cap">
+        <span class="work-photo-cat">Curly Hair</span>
+        <span class="work-photo-title">Deva Cut</span>
+      </figcaption>
+    </figure>
+
+    <figure class="work-photo work-photo--3">
+      <img src="images/color 2.jpg" alt="Silver hair toning">
+      <figcaption class="work-photo-cap">
+        <span class="work-photo-cat">Hair Colour</span>
+        <span class="work-photo-title">Silver Toning</span>
+      </figcaption>
+    </figure>
+
+    <figure class="work-photo work-photo--4">
+      <img src="images/bridal 2.jpg" alt="Bridal dramatic eye">
+      <figcaption class="work-photo-cap">
+        <span class="work-photo-cat">Bridal</span>
+        <span class="work-photo-title">Dramatic Eye</span>
+      </figcaption>
+    </figure>
+
+    <figure class="work-photo work-photo--5">
+      <img src="images/men 1.jpg" alt="Men's modern fade">
+      <figcaption class="work-photo-cap">
+        <span class="work-photo-cat">Men's Grooming</span>
+        <span class="work-photo-title">Modern Fade</span>
+      </figcaption>
+    </figure>
+
+    <figure class="work-photo work-photo--6">
+      <img src="images/color 3.jpg" alt="Copper balayage">
+      <figcaption class="work-photo-cap">
+        <span class="work-photo-cat">Hair Colour</span>
+        <span class="work-photo-title">Copper Balayage</span>
+      </figcaption>
+    </figure>
+
+  </section>
+
+  <!-- ============================================================
+       TESTIMONIALS
+  ============================================================ -->
+  <section class="testimonials">
+    <div class="testimonials-header">
+      <span class="label-text">Client Stories</span>
+      <h2 class="testimonials-headline reveal">What Chennai Says</h2>
+    </div>
+
+    <div class="tstack-scene">
+      <div class="tstack-wrapper">
+
+        <!-- Card 0 -->
+        <div class="tstack-card">
+          <div class="tstack-stars">★★★★★</div>
+          <p class="tstack-text">"Got a global colour here and I cannot believe how healthy my hair still feels. Most salons leave your hair dry after colouring — Scaleup actually made mine softer. The colour is exactly what I asked for."</p>
+          <div class="tstack-author">
+            <div class="tstack-avatar" aria-hidden="true">KR</div>
+            <div class="tstack-info">
+              <span class="tstack-name">Keerthi R.</span>
+              <span class="tstack-role">Hair Colour Treatment</span>
+            </div>
+          </div>
+        </div>
+
         <!-- Card 1 -->
-        <div class="service-card reveal">
-          <div class="service-card-image">
-            <img src="images/services-hair.png" alt="Hair Styling">
-          </div>
-          <div class="service-card-body">
-            <h3>Hair Styling</h3>
-            <p>From classic cuts to modern trends, our stylists craft the perfect look tailored to your personality and lifestyle.</p>
-            <div class="service-price">
-              <span>From $65</span>
-              <a href="#contact" class="btn-arrow">Book Now</a>
+        <div class="tstack-card">
+          <div class="tstack-stars">★★★★★</div>
+          <p class="tstack-text">"Russian manicure lasted four weeks. Best nail experience I've had in the city. The technician was precise, clean, and genuinely skilled."</p>
+          <div class="tstack-author">
+            <div class="tstack-avatar" aria-hidden="true">DK</div>
+            <div class="tstack-info">
+              <span class="tstack-name">Divya K.</span>
+              <span class="tstack-role">Nail Artistry</span>
             </div>
           </div>
         </div>
-        <!-- Card 2 -->
-        <div class="service-card reveal">
-          <div class="service-card-image">
-            <img src="images/services-facial.png" alt="Facial Treatments">
-          </div>
-          <div class="service-card-body">
-            <h3>Facial Treatments</h3>
-            <p>Rejuvenate your skin with our luxurious facial treatments using premium organic products for a radiant glow.</p>
-            <div class="service-price">
-              <span>From $85</span>
-              <a href="#contact" class="btn-arrow">Book Now</a>
+
+        <!-- Card 2 — center / active on load -->
+        <div class="tstack-card">
+          <div class="tstack-stars">★★★★★</div>
+          <p class="tstack-text">"The team really knows their curls. My Deva cut was absolutely perfect. They took time to understand my hair before even picking up the scissors. I've been to salons all over Chennai — none of them compare."</p>
+          <div class="tstack-author">
+            <div class="tstack-avatar" aria-hidden="true">AM</div>
+            <div class="tstack-info">
+              <span class="tstack-name">Ananya M.</span>
+              <span class="tstack-role">Curly Hair Specialist · Ramapuram</span>
             </div>
           </div>
         </div>
+
         <!-- Card 3 -->
-        <div class="service-card reveal">
-          <div class="service-card-image">
-            <img src="images/services-nails.png" alt="Nail Art & Care">
-          </div>
-          <div class="service-card-body">
-            <h3>Nail Art &amp; Care</h3>
-            <p>Pamper your hands and feet with our expert nail services — from classic manicures to intricate nail art designs.</p>
-            <div class="service-price">
-              <span>From $45</span>
-              <a href="#contact" class="btn-arrow">Book Now</a>
+        <div class="tstack-card">
+          <div class="tstack-stars">★★★★★</div>
+          <p class="tstack-text">"Bridal makeup was absolutely stunning. Venisha and the team made my wedding morning completely stress-free. I looked exactly how I imagined and felt completely confident all day."</p>
+          <div class="tstack-author">
+            <div class="tstack-avatar" aria-hidden="true">PS</div>
+            <div class="tstack-info">
+              <span class="tstack-name">Priya S.</span>
+              <span class="tstack-role">Bridal Package</span>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ========== GALLERY / SHOWCASE ========== -->
-  <section class="showcase" id="showcase">
-    <div class="container">
-      <div class="showcase-header reveal">
-        <div class="section-label" style="justify-content:center;">Our Work</div>
-        <h2>Beauty in Every Detail</h2>
-        <p>A glimpse into the transformations and artistry our team creates every day.</p>
-      </div>
-      <div class="showcase-grid">
-        <div class="showcase-item tall reveal">
-          <img src="images/gallery.png" alt="Hair transformation">
-          <div class="showcase-overlay"><span>Bridal Updo</span></div>
-        </div>
-        <div class="showcase-item reveal">
-          <img src="images/services-hair.png" alt="Color work">
-          <div class="showcase-overlay"><span>Balayage Color</span></div>
-        </div>
-        <div class="showcase-item reveal">
-          <img src="images/services-facial.png" alt="Facial glow">
-          <div class="showcase-overlay"><span>Glow Facial</span></div>
-        </div>
-        <div class="showcase-item reveal">
-          <img src="images/hero.png" alt="Styling session">
-          <div class="showcase-overlay"><span>Styling Session</span></div>
-        </div>
-        <div class="showcase-item wide reveal">
-          <img src="images/about.png" alt="Salon interior">
-          <div class="showcase-overlay"><span>Our Space</span></div>
-        </div>
-        <div class="showcase-item reveal">
-          <img src="images/services-nails.png" alt="Nail art">
-          <div class="showcase-overlay"><span>Nail Artistry</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== TESTIMONIALS ========== -->
-  <section class="testimonials" id="testimonials">
-    <div class="container">
-      <div class="testimonials-header reveal">
-        <div class="section-label" style="justify-content:center;">Testimonials</div>
-        <h2>What Our Clients Say</h2>
-      </div>
-      <div class="testimonial-track">
-        <div class="testimonial-card reveal">
-          <div class="quote-icon">"</div>
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">Absolutely love this place! The stylists are incredibly talented and the atmosphere is so relaxing. I always leave feeling like a million bucks.</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">SP</div>
-            <div class="testimonial-author-info">
-              <h4>Sarah Parker</h4>
-              <p>Regular Client</p>
+        <!-- Card 4 -->
+        <div class="tstack-card">
+          <div class="tstack-stars">★★★★★</div>
+          <p class="tstack-text">"My hair was so damaged from years of bad treatments. One session of Hair Botox here and it looks completely transformed. I genuinely didn't know my hair could feel this way."</p>
+          <div class="tstack-author">
+            <div class="tstack-avatar" aria-hidden="true">RM</div>
+            <div class="tstack-info">
+              <span class="tstack-name">Riya M.</span>
+              <span class="tstack-role">Hair Botox Treatment</span>
             </div>
           </div>
         </div>
-        <div class="testimonial-card reveal">
-          <div class="quote-icon">"</div>
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">The best salon experience I've ever had. From the warm welcome to the stunning results — You &amp; Me truly cares about their clients.</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">ML</div>
-            <div class="testimonial-author-info">
-              <h4>Mia Laurent</h4>
-              <p>5-Year Client</p>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card reveal">
-          <div class="quote-icon">"</div>
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">My bridal hair was absolutely perfect. The team went above and beyond to make sure I looked and felt beautiful on my special day.</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">RK</div>
-            <div class="testimonial-author-info">
-              <h4>Rachel Kim</h4>
-              <p>Bridal Client</p>
-            </div>
-          </div>
+
+        <!-- Navigation arrows -->
+        <button class="tstack-prev" aria-label="Previous testimonial">&#8592;</button>
+        <button class="tstack-next" aria-label="Next testimonial">&#8594;</button>
+
+      </div>
+
+      <!-- Dots -->
+      <div class="tstack-dots" aria-label="Testimonial navigation">
+        <button class="tstack-dot" aria-label="Testimonial 1"></button>
+        <button class="tstack-dot" aria-label="Testimonial 2"></button>
+        <button class="tstack-dot active" aria-label="Testimonial 3"></button>
+        <button class="tstack-dot" aria-label="Testimonial 4"></button>
+        <button class="tstack-dot" aria-label="Testimonial 5"></button>
+      </div>
+
+      <div class="tstack-google-badge">
+        <p>★★★★★ 4.8 &nbsp;·&nbsp; 840+ Google Reviews</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA SECTION
+  ============================================================ -->
+  <section class="cta-section">
+    <div class="cta-inner">
+      <div class="cta-left">
+        <span class="label-text cta-label">Book Your Visit</span>
+        <h2 class="cta-headline reveal">Ready for your<br>transformation?</h2>
+        <div class="cta-divider reveal reveal-delay-1"></div>
+        <p class="cta-body reveal reveal-delay-2">
+          Walk in with your hair goals. Walk out with results that last.
+          Appointment-based, so you get our full attention every time.
+        </p>
+        <div class="cta-buttons reveal reveal-delay-3">
+          <a href="contact.html" class="btn-primary">Book Appointment</a>
+          <a href="https://wa.me/919003158542" target="_blank" rel="noopener" class="btn-secondary">WhatsApp Us</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== PARALLAX QUOTE ========== -->
-  <section class="parallax-section" style="padding:140px 0;text-align:center;color:#fff;">
-    <div class="parallax-bg" data-parallax-speed="0.3">
-      <img src="images/salon-wide.png" alt="Salon interior">
-    </div>
-    <div class="parallax-overlay"></div>
-    <div class="container" data-gsap="fade-up">
-      <h2 style="color:#fff;font-size:clamp(2rem,4vw,3.5rem);max-width:700px;margin:0 auto 1rem;">"Beauty begins the moment you decide to be yourself."</h2>
-      <p style="color:rgba(255,255,255,.75);font-size:1.1rem;">— Coco Chanel</p>
-    </div>
-  </section>
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer>
+    <div class="footer-grid">
 
-  <!-- ========== CTA BANNER ========== -->
-  <section class="cta-banner" id="contact">
-    <div class="container reveal">
-      <div class="section-label" style="justify-content:center;color:rgba(255,255,255,.7);">Ready for a Change?</div>
-      <h2>Book Your Visit Today</h2>
-      <p>Treat yourself to a luxurious beauty experience. Walk in or schedule an appointment — we can't wait to welcome you.</p>
-      <a href="contact.html" class="btn btn-arrow">Book an Appointment</a>
-    </div>
-  </section>
+      <!-- Col 1 -->
+      <div>
+        <img src="images/scale up logo.png" alt="ScaleUp Unisex Salon" class="footer-logo-img">
+        <span class="footer-brand-name">SCALE UP</span>
+        <span class="footer-brand-sub">Unisex Salon</span>
+        <span class="footer-tagline">Your texture. Our expertise.</span>
+      </div>
 
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="#" class="logo">You <span>&amp;</span> Me</a>
-          <p>A luxury salon dedicated to making you look and feel your absolute best. Beauty, confidence, and care — all under one roof.</p>
-          <div class="footer-socials">
-            <a href="#" class="footer-social-link" aria-label="Instagram">IG</a>
-            <a href="#" class="footer-social-link" aria-label="Facebook">FB</a>
-            <a href="#" class="footer-social-link" aria-label="Pinterest">PI</a>
-            <a href="#" class="footer-social-link" aria-label="TikTok">TK</a>
-          </div>
-        </div>
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <div class="footer-links">
-            <a href="about.html">About Us</a>
-            <a href="services.html">Services</a>
-            <a href="#showcase">Gallery</a>
-            <a href="#testimonials">Reviews</a>
-            <a href="contact.html">Contact</a>
-          </div>
-        </div>
-        <div class="footer-col">
-          <h4>Services</h4>
-          <div class="footer-links">
-            <a href="services.html">Hair Styling</a>
-            <a href="services.html">Facials</a>
-            <a href="services.html">Nail Care</a>
-            <a href="services.html">Bridal Packages</a>
-            <a href="services.html">Spa Treatments</a>
-          </div>
-        </div>
-        <div class="footer-col">
-          <h4>Get in Touch</h4>
-          <div class="footer-contact-item">
-            <span class="icon">📍</span>
-            <span>123 Beauty Lane, Suite 200<br>New York, NY 10001</span>
-          </div>
-          <div class="footer-contact-item">
-            <span class="icon">📞</span>
-            <span>(555) 123-4567</span>
-          </div>
-          <div class="footer-contact-item">
-            <span class="icon">✉️</span>
-            <span>hello@youandmesalon.com</span>
-          </div>
-          <div class="footer-contact-item">
-            <span class="icon">🕐</span>
-            <span>Mon–Sat: 9AM – 7PM<br>Sunday: 10AM – 5PM</span>
-          </div>
-        </div>
+      <!-- Col 2 -->
+      <div>
+        <span class="footer-col-label">Explore</span>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 You &amp; Me Salon. All rights reserved.</p>
-        <p>Designed with ♥ for beauty lovers.</p>
+
+      <!-- Col 3 -->
+      <div>
+        <span class="footer-col-label">Specialities</span>
+        <ul class="footer-links">
+          <li><a href="services.html">Curly Hair</a></li>
+          <li><a href="services.html">Hair Botox</a></li>
+          <li><a href="services.html">Nail Art</a></li>
+          <li><a href="services.html">Bridal</a></li>
+          <li><a href="services.html">Facials</a></li>
+          <li><a href="services.html">Men's Grooming</a></li>
+        </ul>
       </div>
+
+      <!-- Col 4 -->
+      <div>
+        <span class="footer-col-label">Find Us</span>
+        <p class="footer-contact-item">New No 18, Old No 26, 2nd Floor</p>
+        <p class="footer-contact-item">Hoppman Street, Ramapuram</p>
+        <p class="footer-contact-item">Chennai 600089</p>
+        <a href="tel:+919003158542" class="footer-contact-item highlight" style="margin-top: 12px;">+91 90031 58542</a>
+        <p class="footer-contact-item" style="margin-top: 8px;">Mon–Sat: 10AM–8PM</p>
+        <p class="footer-contact-item">Sunday: 10AM–6PM</p>
+        <a href="https://instagram.com/scaleup_salon" target="_blank" rel="noopener" class="footer-contact-item highlight" style="margin-top: 12px;">@scaleup_salon</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2024 Scaleup Unisex Salon, Chennai. Website by ElevateUX.</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
